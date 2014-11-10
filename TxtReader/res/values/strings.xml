@@ -4,5 +4,9 @@
     <string name="app_name">TxtReader</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="open_file">打开文件</string>
+    <string name="use_label">点击按钮浏览SD卡目文件目录</string>
+    <string name="code_utf_8">UTF-8</string>
+    <string name="code_gb2312">GB2312</string>
 
 </resources>
