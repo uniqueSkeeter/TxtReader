@@ -9,8 +9,16 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 
+/*
+ * @author:uniqueSkeeter
+ * 
+ * @email:wenrui199231@gmail.com
+ * 
+ * @app name:TxtReader
+ */
 public class MainActivity extends Activity {
 
 	@Override
@@ -18,15 +26,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		this.setContentView(R.layout.activity_main);
 		Button openFileBtn = (Button) this.findViewById(R.id.openFIleBtn);
-		openFileBtn.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// TODO 打开sd card 文件列表
-				Intent in = new Intent(MainActivity.this, ListAllFileActivity.class);
-				MainActivity.this.startActivityForResult(in, 0);
-			}
-		});
+		openFileBtn.setOnClickListener(new OpenFileAction());
 	}
 
 	@Override
@@ -65,5 +65,16 @@ public class MainActivity extends Activity {
 					}
 				}).create();
 		dialog.show();
+	}
+
+	class OpenFileAction implements OnClickListener {
+
+		@Override
+		public void onClick(View v) {
+
+			Intent in = new Intent(MainActivity.this, ListAllFileActivity.class);
+			MainActivity.this.startActivityForResult(in, 0);
+		}
+
 	}
 }

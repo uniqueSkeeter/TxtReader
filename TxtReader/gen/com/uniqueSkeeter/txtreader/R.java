@@ -23,15 +23,22 @@ public final class R {
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
+        public static final int reader=0x7f020001;
     }
     public static final class id {
-        public static final int about=0x7f080003;
-        public static final int gb2312=0x7f080002;
-        public static final int openFIleBtn=0x7f080000;
-        public static final int utf8=0x7f080001;
+        public static final int about=0x7f080006;
+        public static final int gb2312=0x7f080005;
+        public static final int openFIleBtn=0x7f080001;
+        public static final int text1=0x7f080003;
+        public static final int utf8=0x7f080004;
+        public static final int view_contents=0x7f080000;
+        public static final int vw1=0x7f080002;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
+        public static final int activity_listallfile=0x7f030000;
+        public static final int activity_main=0x7f030001;
+        public static final int activity_viewfile=0x7f030002;
+        public static final int row=0x7f030003;
     }
     public static final class menu {
         public static final int main=0x7f070000;

@@ -10,7 +10,7 @@
     <string name="code_gb2312">GB2312</string>
     <string name="about">关于</string>
     <string name="about_title">作者的联系方式</string>
-    <string name="about_info">南京大学计算机系 111220135 文锐 wenrui199231@gmail.com 如果你对软件有任何建议，欢迎联系我</string>
+    <string name="about_info">南京大学计算机系 文锐 wenrui199231@gmail.com 如果你对软件有任何建议，欢迎联系我</string>
     <string name="ok">OK</string>
 
 </resources>
