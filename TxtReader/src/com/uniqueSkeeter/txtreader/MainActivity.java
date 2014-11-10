@@ -1,6 +1,9 @@
 package com.uniqueSkeeter.txtreader;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -30,6 +33,8 @@ public class MainActivity extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		this.getMenuInflater().inflate(R.menu.main, menu);
+		menu.removeItem(R.id.utf8);
+		menu.removeItem(R.id.gb2312);
 		return true;
 	}
 
@@ -39,10 +44,26 @@ public class MainActivity extends Activity {
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
+		switch (id) {
+			case R.id.about:
+				this.doAbout();
+				break;
+			default:
+				break;
 		}
 		return super.onOptionsItemSelected(item);
 	}
 
+	// 点击关于弹出框
+	private void doAbout() {
+		Dialog dialog = new AlertDialog.Builder(MainActivity.this).setTitle(R.string.about_title)
+				.setMessage(R.string.about_info).setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+
+					@Override
+					public void onClick(DialogInterface dialoginterface, int i) {
+						// 按钮事件
+					}
+				}).create();
+		dialog.show();
+	}
 }
